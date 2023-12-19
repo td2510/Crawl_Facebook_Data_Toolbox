@@ -1,0 +1,34 @@
+{
+  "name": "Cào dữ liệu FB",
+  "version": "1.25",
+  "description": "Cào dữ liệu từ nhóm, fanpage, trang cá nhân facebook",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1Tv0iU406A0GkZKCq++jDoz0nvGAbX96izFUbtqcHg7VEgGW5/xqT14EwrFYHFkTuke3t/aIjD0Omus1DAoRKgj/1yZRAQVP24g2Gsr5N0RoK4+0V/Lz201WQ7XH2wHAY6KLR+WFyjYfjTFm0vULvHZC5YEUPHRBBimu+rVBU4i8/nztYRgCCwigeQWlLPLJyLPIwbq7fMZmS5wZEsMwQXems4FH7jIUs6qmTBVii3p9d+BbI8XQlkb+UxaOVb3KPx/cnmnfCa9pljYETwSZbegWMHtgEXf8A2yUSBAPFHAc7JemqUow04cCWjpFlPwjfivv16JKAMEkqnrxSIhnvwIDAQAB",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "https://*.facebook.com/*",
+    "https://audinsights.app/*",
+    "http://localhost:3000/*",
+    "cookies",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "64": "64.png",
+    "128": "128.png"
+  },
+  "browser_action": {
+    "default_icon": "128.png",
+    "default_title": "Toolbox"
+  },
+  "background": {
+    "scripts": ["interceptor.js", "api.js"]
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:3000/*"
+    ]
+  }
+}
